@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Task</title>  
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFF99;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .chat_box {
+            display: inline-block;
+            width: 70%;
+            margin-top: 49px;
+            font-size: 14px;
+        }
+
+        .message > p {
+            margin: 0;
+        }
+
+        .message {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #999;
+            background-color: #eee;
+            padding: 6px;
+            box-shadow: 3px 3px 5px 0 rgba(102, 102, 102, 0.5);
+            position: relative;
+        }
+
+        .message_user {
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 12px;
+        }
+
+        .message_admin {
+            white-space: nowrap;
+            color: #000;
+            display: inline-block;
+        }
+
+        .message:nth-child(2n) {
+            border-radius: 0 4px 4px 0;
+            left: 2%;
+        }
+          
+        .message:nth-child(2n+1) {
+            border-radius: 4px 0 0 4px;
+            right: 2%;
+        }
+          
+        .message:first-child {
+            border-radius: 4px 4px 0;
+        }
+          
+        .message:last-child {
+            border-radius: 0 4px 4px;
+            text-transform: uppercase;
+        }
+
+        .message:nth-child(2n) .item_left {
+            color: #000;
+        }
+
+        .message:nth-child(2n) .item_right {
+            color: #666;
+        }
+
+        .message:not(:first-child) {
+            margin: -1px auto 0;
+        }
+
+        @media all and (min-width: 600px) {
+            .chat_box {
+                width: 49%;
+            }
+        }
+
+        @media all and (min-width: 1500px) {
+            .chat_box {
+                width: 33.3%;
+            }
+        }
+    </style>
+ </head>
+
+ <body>
+  <main>
+    <section class="chat_box">
+        <div class="message">
+          <p class="message_user">Short text</p> 
+          <p class="message_admin">Is short</p>
+        </div>
+      
+        <div class="message">
+          <p class="message_user">A little bit longer text</p> 
+          <p class="message_admin">Is longer</p>
+        </div>
+      
+        <div class="message">
+          <p class="message_user">Also a little bit longer</p> 
+          <p class="message_admin">Yes it is</p>
+        </div>
+      
+        <div class="message">
+          <p class="message_user">A longer text is here, totalle for no reason</p> 
+          <p class="message_admin">Is long.</p>
+        </div>
+      
+        <div class="message">
+          <p class="message_user">A long text is here also, for the same reason Is long too</p> 
+          <p class="message_admin">Is long too</p>
+        </div>
+      
+        <div class="message">
+          <p class="message_user">OK</p> 
+          <p class="message_admin">OK</p>
+        </div>
+    </section>
+  </main>
+ </body>
+</html>
